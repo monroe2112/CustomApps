@@ -1,4 +1,4 @@
-from Tkinter import *
+from tkinter import *
 #import Tkinter as ttk
 #from ttk import *
 
