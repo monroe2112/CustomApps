@@ -1,17 +1,19 @@
+#**************************************************
+#*                                                *
+#* Prize Wheel application                        *
+#*To be used with prize wheel to collect user data*
+#*                                                *
+#*Version Info                                    *
+#*0.1 1/20/2020 by Bob Monroe                     *
+#*    Initial version                             *
+#*0.2 1/21/2020 by Bob Monroe                     *
+#*    Added comments                              *
+#*0.3 1/23/2020 by Bob Monroe                     *
+#*    Added 2nd file write                        *
+
+#**************************************************
 from tkinter import *
-#import tkinter as tkk
-
 from pathlib import Path
-
-#if Path('a.out').is_file():
- #   print ("File exists")
-#else:
- #   TS = "First Name, Last Name, Title, Location, Email, Phone Number, Carrier \n"
-  #  print ("File not exists")
-   # TheFile = open('a.out', 'w+')
- #   print(TS)
- #  TheFile.write(TS)
- #  TheFile.close
 
 master = Tk()
 
@@ -56,10 +58,16 @@ def TheWork():
     C = ","
     c = TheString.get()
     BS = "%s %s %s %s %s %s %s %s %s %s %s %s %s \n" % (f,C, L, C, T, C, l, C, e, C, p, C, c)
+    TS = "%s %s %s %s %s \n" % (f,C,p,C,c)
     print(BS)
     saveFile = open('a.out', "a+")
     saveFile.write(BS)
     saveFile.close
+    print(TS)
+    saveFile = open('b.out', "w")
+    saveFile.write(TS)
+    saveFile.close
+
 
 def ClearThings():
     Fname.delete(0, END)
